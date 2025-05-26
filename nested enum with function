@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+
+enum weekday {sun=1,mon=2,teu=3,wen=4,su=5,fri=6,ther=7};
+
+void print_menu() {
+	cout << "**********************" << endl;
+	cout << "    the week day      " << endl;
+	cout << "**********************" << endl;
+	cout << "1-sun" << endl;
+	cout << "2-mon" << endl;
+	cout << "3-teu" << endl;
+	cout << "4-wen" << endl;
+	cout << "5-su" << endl;
+	cout << "6-fri" << endl;
+	cout << "7-ther" << endl;
+	cout << "**********************" << endl;
+
+}
+weekday read() {
+	
+	cout << "enter week day" << endl;
+	int n;
+	cin >> n;
+	return (weekday)n;
+
+}
+string getmass(weekday day) {
+	switch (day) {
+	case weekday::sun:
+		return "sunday";
+			break;
+	case weekday::mon:
+		return "monday";
+		break;
+	case weekday::teu:
+		return "tuesday";
+		break;
+	case weekday::wen:
+		return "wensday";
+		break;
+	case weekday::su:
+		return "suterday";
+		break;
+	case weekday::fri:
+		return "friday";
+		break;
+	case weekday::ther:
+		return "therday";
+
+	
+	}
+
+
+
+}
+
+int main()
+{
+	print_menu();
+		
+	cout << "today is "<<getmass(read()) << endl;
+}
