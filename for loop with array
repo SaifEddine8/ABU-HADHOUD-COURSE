@@ -42,7 +42,7 @@ int main()
 	int arr[100], l;
 	readArray(arr, l);
 	print(arr, l);
-	cout << "sum of arr is" << calculats(arr, l) << endl;
-	cout << "avareg of arr is" << claculatav(arr, l) << endl;
+	cout << "sum= " << calculats(arr, l) << endl;
+	cout << "avareg= " << claculatav(arr, l) << endl;
 
 }
