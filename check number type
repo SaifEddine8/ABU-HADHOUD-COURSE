@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+enum numty {odd=1,even=2};
+
+int read_num() {
+	int n;
+	cout << "enter integer number" << endl;
+	cin >> n;
+	return n;
+
+
+}
+numty checkty(int n) {
+	if (n % 2 == 0)
+		return numty::even;
+	else
+		return numty::odd;
+
+
+
+
+}
+
+
+
+void print(numty num)  {
+	if (numty::even)
+		cout << "this number is even" << endl;
+	else
+		cout << "this number is odd" << endl;
+
+
+}
+int main()
+{
+	print(checkty(read_num()));
+
+	
+}
