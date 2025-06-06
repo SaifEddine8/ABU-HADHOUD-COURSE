@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+struct stinfo 
+{
+	int age;
+	bool dreiver_l;
+	bool haswasta;
+};
+stinfo read_info() {
+	cout << "enter your age" << endl;
+	stinfo info;
+	cin >> info.age;
+	cout << "enter your has or not has driver license" << endl;
+	cin >> info.dreiver_l;
+	cout << "enter your has or not has wasta" << endl;
+	cin >> info.haswasta;
+	return info;
+}
+bool isaccepted(stinfo info) {
+	if ((info.age >= 18 && info.dreiver_l == true)||info.haswasta==true)
+
+		return true;
+
+
+	else
+		return false;
+}
+void print(stinfo info) {
+	if (isaccepted(info))
+		cout << "hired" << endl;
+	else
+		cout << "rejected" << endl;
+}
+int main()
+{
+	
+	print(read_info());
+	
+}
