@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+struct stinfo{
+	string firstname;
+	string lastname;
+
+};
+stinfo read() {
+	stinfo info;
+	cout << "enter your first name:" << endl;
+	cin.ignore(0, '\n');
+	getline(cin,info.firstname);
+	cout << "enter your first name:" << endl;
+	cin.ignore(0, '\n');
+	getline(cin, info.lastname);
+	return info;
+}
+string concatname(stinfo name,bool revers) {
+	string fullname;
+	if(revers)
+		fullname = name.lastname + " " + name.firstname;
+	else
+		fullname = name.firstname + " " + name.lastname;
+
+	return fullname;
+}
+void print(string fullname) {
+	cout << "full name is: " << fullname << endl;
+}
+int main()
+{
+	
+	print(concatname(read(),0));
+	
+}
