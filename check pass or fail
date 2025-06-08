@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+enum encheck{pass=1,fail=2};
+struct  marks {
+	int mark1, mark2, mark3;
+
+};
+marks read() {
+	marks mark;
+	cout << "enter your three marks: " << endl;
+	cin >> mark.mark1 >> mark.mark2 >> mark.mark3;
+	return mark;
+
+}
+int sum(marks mark) {
+	return mark.mark1 + mark.mark2 + mark.mark3;
+}
+double avg(int sum) {
+	return sum / 3.0;
+}
+ encheck check(marks mark) {
+	 if (avg(sum(mark)) >= 50)
+		 return encheck::pass;
+	 else
+		 return encheck::fail;
+
+
+}
+void print(marks mark) {
+	if (check(mark) == encheck::pass)
+		cout << "you have a pass" << endl;
+	else
+		cout << "you have a fail" << endl;
+
+}
+int main()
+{
+	print(read());
+	
+
+	
+}
