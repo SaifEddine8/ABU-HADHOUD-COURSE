@@ -1,0 +1,24 @@
+void Read(int& h, int& w)
+{
+	cout << "enter the high of the rectangle: ";
+	cin >> h;
+	cout << "enter the wiedth of the rectangle: ";
+	cin >> w;
+
+}
+int AreaOfReactangle(int h,int w) {
+	return h * w;
+
+}
+void PrintAreaOfReactangle(int area) {
+	cout << "the area of rectangle = " << area << endl;
+
+
+}
+int main()
+{
+	int high, wiedth;
+	Read(high, wiedth);
+	PrintAreaOfReactangle(AreaOfReactangle(high, wiedth));
+
+}
